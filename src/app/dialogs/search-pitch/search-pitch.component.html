@@ -1,0 +1,196 @@
+<!-- <div class="row m-4 d-flex align-items-center ">
+	<div class="col-lg-6">
+		<h1 class="title">Who are you <br> searching for?</h1>
+		<div class="progress mb-3">
+			<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="15"
+				aria-valuemin="0" aria-valuemax="100" style="width: 15%"></div>
+		</div>
+
+	</div>
+	<div class="col-lg-6">
+		<mat-card class="card">Myself</mat-card> <br>
+		<mat-card class="card">My child</mat-card>
+	</div>
+
+</div> -->
+
+<div class="row">
+	<div class="col-lg-12">
+		<mat-stepper orientation="horizontal" [linear]="isLinear" #stepper>
+			<form [formGroup]="myFormGroup">
+				<mat-step>
+					<ng-template matStepLabel>Who are you searching for?</ng-template>
+					<div class="row mt-4 mb-4 d-flex align-items-center ">
+						<div class="col-lg-12">
+
+							<div class="progress mb-3">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+									aria-valuenow="15" aria-valuemin="0" aria-valuemax="100" style="width: 15%"></div>
+							</div>
+							<h1 class="title text-center">Who are you searching for?</h1>
+							<section class="example-section">
+								<mat-radio-group formControlName="searchingFor" aria-labelledby="example-radio-group-label"
+									class="example-radio-group">
+									<mat-radio-button class="example-radio-button" *ngFor="let season of searchingFor"
+										[value]="season.code">
+										{{season.name}}
+									</mat-radio-button>
+								</mat-radio-group>
+							</section>
+						</div>
+
+					</div>
+					<div class="row d-flex">
+						<div class="col-lg-12 text-end">
+							<button color="primary" mat-raised-button matStepperNext>Продолжить</button>
+						</div>
+					</div>
+				</mat-step>
+				<mat-step>
+					<ng-template matStepLabel>How old are you?</ng-template>
+					<div class="row mt-4 mb-4 d-flex align-items-center ">
+						<div class="col-lg-12 text-center">
+							<div class="progress mb-3">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+									aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%"></div>
+							</div>
+							<h1 class="title">How old are you?</h1>
+							<mat-form-field appearance="outline">
+								<mat-label>Age</mat-label>
+								<input width="100%" type="number" matInput formControlName="age" placeholder="0-99" required>
+							</mat-form-field>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12 text-end actions">
+							<button mat-raised-button matStepperPrevious>Назад</button>
+							<button color="primary" mat-raised-button matStepperNext color="primary">Продолжить</button>
+						</div>
+					</div>
+				</mat-step>
+				<mat-step>
+					<ng-template matStepLabel>What type of football do you want to play?</ng-template>
+					<div class="row mt-4 mb-4 d-flex align-items-center ">
+						<div class="col-lg-12">
+							<div class="progress mb-3">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+									aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+							</div>
+							<h1 class="title text-center">What type of football do you want to play?</h1>
+							<section class="example-section">
+								<mat-radio-group formControlName="genderType" aria-labelledby="example-radio-group-label"
+									class="example-radio-group">
+									<mat-radio-button class="example-radio-button" *ngFor="let gender of genderType"
+										[value]="gender.code">
+										{{gender.name}}
+									</mat-radio-button>
+								</mat-radio-group>
+							</section>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-lg-12 text-end actions">
+							<button mat-raised-button matStepperPrevious>Назад</button>
+							<button color="primary" mat-raised-button matStepperNext color="primary">Продолжить</button>
+						</div>
+					</div>
+				</mat-step>
+				<mat-step>
+					<ng-template matStepLabel>
+						What are you interested in playing?</ng-template>
+					<div class="row mt-4 mb-4 d-flex align-items-center ">
+						<div class="col-lg-12">
+							<div class="progress mb-3">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+									aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+							</div>
+							<h1 class="title text-center">
+								What are you interested in playing?</h1>
+							<section class="example-section">
+								<mat-radio-group formControlName="playingType" aria-labelledby="example-radio-group-label"
+									class="example-radio-group">
+									<mat-radio-button class="example-radio-button" *ngFor="let type of playingType" [value]="type.code">
+										{{type.name}}
+									</mat-radio-button>
+								</mat-radio-group>
+							</section>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-lg-12 text-end actions">
+							<button mat-raised-button matStepperPrevious>Назад</button>
+							<button color="primary" mat-raised-button matStepperNext color="primary">Продолжить</button>
+						</div>
+					</div>
+				</mat-step>
+				<mat-step>
+					<ng-template matStepLabel>
+						What are you interested in playing?</ng-template>
+					<div class="row mt-4 mb-4 d-flex align-items-center ">
+						<div class="col-lg-12">
+							<div class="progress mb-3">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+									aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+							</div>
+							<h1 class="title text-center">
+								When do you want to play?</h1>
+							<section class="example-section">
+								<mat-radio-group formControlName="playingType" aria-labelledby="example-radio-group-label"
+									class="example-radio-group">
+									<mat-radio-button class="example-radio-button" *ngFor="let type of time" [value]="type.code">
+										{{type.name}}
+									</mat-radio-button>
+								</mat-radio-group>
+							</section>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-lg-12 text-end actions">
+							<button mat-raised-button matStepperPrevious>Назад</button>
+							<button color="primary" mat-raised-button matStepperNext color="primary">Продолжить</button>
+						</div>
+					</div>
+				</mat-step>
+				<mat-step>
+					<ng-template matStepLabel>
+						What are you interested in playing?</ng-template>
+					<div class="row mt-4 mb-4 d-flex align-items-center ">
+						<div class="col-lg-12">
+							<div class="progress mb-3">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+									aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+							</div>
+							<h1 class="title text-center">
+								Lets find what’s closest to you!
+							</h1>
+							<mat-form-field appearance="fill">
+								<mat-label>Favorite food</mat-label>
+								<mat-select formControlName="locationCode" name="food">
+									<mat-option *ngFor="let item of country" [value]="item.code">
+										{{item.name}}
+									</mat-option>
+								</mat-select>
+							</mat-form-field>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-lg-12 text-end actions">
+							<button mat-raised-button matStepperPrevious>Назад</button>
+							<button color="primary" mat-raised-button matStepperNext color="primary">Продолжить</button>
+						</div>
+					</div>
+				</mat-step>
+			</form>
+		</mat-stepper>
+
+	</div>
+</div>
+
+
+<div mat-dialog-actions>
+	<button mat-button mat-dialog-close cdkFocusInitial>Закрыть</button>
+</div>
