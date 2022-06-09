@@ -6,7 +6,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatRadioModule } from '@angular/material/radio';
+import { MatRadioModule, MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
@@ -20,7 +20,11 @@ import { MatSelectModule } from '@angular/material/select';
 		MatCheckboxModule,
 		MatRadioModule,
 		MatSelectModule
-	]
+	],
+	providers: [{
+		provide: MAT_RADIO_DEFAULT_OPTIONS,
+		useValue: { color: 'primary' }
+	}]
 })
 
 

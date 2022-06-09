@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchPitchComponent } from './dialogs/search-pitch/search-pitch.component';
 import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
 
 @NgModule({
 	declarations: [
@@ -30,7 +31,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 		ReactiveFormsModule
 	],
 	providers: [
-		{ provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } }
+		{ provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
+		{
+			provide: MAT_RADIO_DEFAULT_OPTIONS,
+			useValue: { color: 'primary' }
+		}
 	],
 	bootstrap: [AppComponent]
 })

@@ -20,7 +20,7 @@
 			<form [formGroup]="myFormGroup">
 				<mat-step>
 					<ng-template matStepLabel>Who are you searching for?</ng-template>
-					<div class="row mt-4 mb-4 d-flex align-items-center ">
+					<div class="row mt-4 mb-4 d-flex align-items-center">
 						<div class="col-lg-12">
 
 							<div class="progress mb-3">
@@ -103,7 +103,7 @@
 						<div class="col-lg-12">
 							<div class="progress mb-3">
 								<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-									aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+									aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"></div>
 							</div>
 							<h1 class="title text-center">
 								What are you interested in playing?</h1>
@@ -132,7 +132,7 @@
 						<div class="col-lg-12">
 							<div class="progress mb-3">
 								<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-									aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+									aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
 							</div>
 							<h1 class="title text-center">
 								When do you want to play?</h1>
@@ -161,13 +161,13 @@
 						<div class="col-lg-12">
 							<div class="progress mb-3">
 								<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
-									aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+									aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
 							</div>
 							<h1 class="title text-center">
 								Lets find what’s closest to you!
 							</h1>
-							<mat-form-field appearance="fill">
-								<mat-label>Favorite food</mat-label>
+							<mat-form-field appearance="outline">
+								<mat-label>Выберите город</mat-label>
 								<mat-select formControlName="locationCode" name="food">
 									<mat-option *ngFor="let item of country" [value]="item.code">
 										{{item.name}}
