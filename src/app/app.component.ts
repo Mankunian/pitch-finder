@@ -13,8 +13,8 @@ export class AppComponent implements OnInit {
 	constructor(public dialog: MatDialog) { }
 
 	ngOnInit(): void {
-		this.dialog.open(SearchPitchComponent, {
-			width: '40%'
-		})
+		// this.dialog.open(SearchPitchComponent, {
+		// 	width: '40%'
+		// })
 	}
 }

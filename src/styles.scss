@@ -1,14 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+	height: 100%;
+	min-height: 100vh;
+}
+
+body {
+	margin: 0;
+	// font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .card {
 	cursor: pointer;
 }
 
 .card:hover {
-	box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Параметры тени */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	/* Параметры тени */
 }
 
 .mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {

@@ -28,7 +28,8 @@ import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
 		AppRoutingModule,
 		MaterialModule,
 		BrowserAnimationsModule,
-		ReactiveFormsModule
+		ReactiveFormsModule,
+		AppRoutingModule
 	],
 	providers: [
 		{ provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
